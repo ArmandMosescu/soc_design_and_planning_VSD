@@ -69,11 +69,11 @@ D flip flop ratio=(Nr of D flip flops)/(Total nr of cells)=1613/14876=0.1087 ~ 1
 # Day 2 — Floorplanning and Introduction to Library Cells
 
 Floorplanning is the process of placing everything inside the chip, it relies on 2 parameters:
-__Utilisation Factor__ = (Area of Netlist) / (Total Core Area)
-A utilisation of 0.5–0.6 is typical — leaving space for buffers, routing, etc.
-__Aspect Ratio__ = Height / Width of  core
-A ratio of 1 = square;  else it's a rectangle.
 
+- __Utilisation Factor__ = (Area of Netlist) / (Total Core Area).   
+ A factor of 0.5–0.6 is typical — leaving space for buffers, routing, etc.
+- __Aspect Ratio__ = Height / Width of  core
+A ratio of 1 = square;  else it's a rectangle.
 
 
 
