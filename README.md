@@ -74,6 +74,10 @@ Floorplanning is the process of placing everything inside the chip, it relies on
  A factor of 0.5–0.6 is typical — leaving space for buffers, routing, etc.
 - __Aspect Ratio__ = Height / Width of  core
 A ratio of 1 = square;  else it's a rectangle.
+#
+Cells like: memories, mux, complex ip's, etc are defined as __preplaced cells__ as their placement is user-defined, not automated.
+Capacitors that supply the circuit block with current are called __decoupling capacitors__ or __decap__.
+
 
 
 
