@@ -88,4 +88,6 @@ Capacitors that supply the circuit block with current are called __decoupling ca
 
 A proper power grid uses power rings around the blocks and a power mesh across the whole core. VDD and VSS rails are disributed so that every power ring can supply current to the circuits minimising V drop and and electromigration risk
 
+#
+### Pin Placement and Logical Cell Blockage
 
