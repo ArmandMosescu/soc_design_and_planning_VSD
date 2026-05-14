@@ -59,7 +59,6 @@ After syntheis runs succesfully we will complete the asignment of calculating th
 <img width="594" height="438" alt="Image" src="https://github.com/user-attachments/assets/df023aa0-dc91-4eaf-a65c-5caf64ad6dd9" />
 
 total cells=14876
-
 D flip flops=1613
 
 ```bash
