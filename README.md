@@ -76,13 +76,14 @@ Floorplanning is the process of placing everything inside the chip, it relies on
 A ratio of 1 = square;  else it's a rectangle.
 #
 ### Preplaced Cells
-#
+
 Cells like: memories, mux, complex ip's, etc are defined as __preplaced cells__ as their placement is user-defined, not automated.
-### Decoupling Capacitors
 #
+### Decoupling Capacitors
+
 Capacitors that supply the circuit block with current are called __decoupling capacitors__ or __decap__.
 
-
+#
 
 
 
