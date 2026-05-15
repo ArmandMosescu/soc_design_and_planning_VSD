@@ -113,3 +113,21 @@ magic -T/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sk
 
 ```
 <img width="1437" height="752" alt="Image" src="https://github.com/user-attachments/assets/90d1f18f-14c3-44b3-98fa-27066081398b" />
+#
+After viewing the floorplan we will place all our cells with the run_placement command and see them on our floorplan
+```bash
+cd ~/Desktop/work/tools/openlane_working_dir/openlane
+docker
+flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+run_synthesis
+run_floorplan
+run_placement
+```
+then
+```bash
+cd ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-05_17-40/results/floorplan
+magic -T/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
+```
+<img width="1820" height="869" alt="Image" src="https://github.com/user-attachments/assets/107fd7a2-389a-4e53-9bfc-6b58c9dc349b" />
