@@ -94,4 +94,22 @@ The input and output pins are placed on different sides of the core and their pl
 
 A critical step in order to stop the automated routing tool from placing cells in the pin area, is blocking the I/O ring area.
 #
+#LAB - Running the Floorplan of our picorv32a design
 
+First, we will continue from the succesful synthesis of our design, adding the run_floorplan command
+```bash
+cd ~/Desktop/work/tools/openlane_working_dir/openlane
+docker
+flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+run_synthesis
+run_floorplan
+```
+After floorplan is complete we will navigate to our runs directory and view the floorplan using the Sky130aA technology
+```bash
+cd ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-05_17-40/results/floorplan
+magic -T/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
+
+```
+<img width="1437" height="752" alt="Image" src="https://github.com/user-attachments/assets/90d1f18f-14c3-44b3-98fa-27066081398b" />
