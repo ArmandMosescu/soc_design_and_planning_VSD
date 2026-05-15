@@ -48,8 +48,7 @@ __OpenLANE__ is the primary engine of this movement. It integrates multiple open
 ```bash
 cd ~/Desktop/work/tools/openlane_working_dir/openlane
 docker
-/openLANE_flow
-./flow.tcl -interactive
+flow.tcl -interactive
 package require openlane 0.9
 prep -design picorv32a
 run_synthesis
@@ -90,4 +89,9 @@ A proper power grid uses power rings around the blocks and a power mesh across t
 
 #
 ### Pin Placement and Logical Cell Blockage
+
+The input and output pins are placed on different sides of the core and their placement depends on the placement of the cells, one important note is that the __CLK__ pins are always bigger than the rest so that they provide the least resistance, as they drive signals to the whole core.
+
+A critical step in order to stop the automated routing tool from placing cells in the pin area, is blocking the I/O ring area.
+#
 
