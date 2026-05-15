@@ -115,7 +115,7 @@ magic -T/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sk
 <img width="1437" height="752" alt="Image" src="https://github.com/user-attachments/assets/90d1f18f-14c3-44b3-98fa-27066081398b" />
 
 
-After viewing the floorplan we will place all our cells with the run_placement command and see them on our floorplan
+ After viewing the floorplan we will place all our cells with the run_placement command and see them on our floorplan
 
 ```bash
 cd ~/Desktop/work/tools/openlane_working_dir/openlane
