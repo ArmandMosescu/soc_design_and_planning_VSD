@@ -94,7 +94,7 @@ The input and output pins are placed on different sides of the core and their pl
 
 A critical step in order to stop the automated routing tool from placing cells in the pin area, is blocking the I/O ring area.
 #
-###LAB - Running the Floorplan of our picorv32a design
+## LAB - Running the Floorplan of our picorv32a design
 
 First, we will continue from the succesful synthesis of our design, adding the run_floorplan command
 ```bash
