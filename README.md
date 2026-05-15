@@ -106,7 +106,7 @@ prep -design picorv32a
 run_synthesis
 run_floorplan
 ```
-After floorplan is complete we will navigate to our runs directory and view the floorplan using the Sky130aA technology
+After floorplan is complete we will navigate to our runs directory and view the floorplan using the Sky130A technology
 ```bash
 cd ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-05_17-40/results/floorplan
 magic -T/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
