@@ -169,3 +169,21 @@ And view our plotted input and output
 ngspice 1 -> plot y vs time a
 ```
 <img width="1326" height="745" alt="Image" src="https://github.com/user-attachments/assets/6de9b18c-c031-474d-9ee1-52c5a905a813" />
+
+#
+
+# Lab exercise to fix poly.9 error in Sky130 tech-file
+
+We will download the drc_test archive from 
+
+```bash
+http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+```
+
+We will launch Magic layout tool and select "met3.mag"
+
+<img width="1196" height="732" alt="Image" src="https://github.com/user-attachments/assets/929914b4-d76e-42fd-b5c7-d135736722d2" />
+
+Then, we will enter "load poly" in our command prompt
+
+<img width="1207" height="760" alt="Image" src="https://github.com/user-attachments/assets/cbabfa49-1e20-462a-91e5-e17e24af2c6d" />
