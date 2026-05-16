@@ -134,3 +134,23 @@ cd ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/15-
 magic -T/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
 ```
 <img width="1820" height="869" alt="Image" src="https://github.com/user-attachments/assets/107fd7a2-389a-4e53-9bfc-6b58c9dc349b" />
+
+#
+
+# Day 3 — Design library cell using Magic Layout and ngspice characterization
+
+Firstly we will analyze an inverter cell design, the design can be found at:
+
+```bash
+https://github.com/nickson-jose/vsdstdcelldesign
+```
+#
+We will create a copy of the technology file in the design's directory
+```bash
+~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic$ cp sky130A.tech vsdstdcelldesign/libs
+```
+then launch Magic
+```bash
+~/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/libs$ magic -T sky130A.tech sky130_inv.mag
+```
+<img width="1038" height="617" alt="Image" src="https://github.com/user-attachments/assets/3321d73b-7a38-439a-983e-2e7214844977" />
