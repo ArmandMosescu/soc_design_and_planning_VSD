@@ -189,3 +189,19 @@ We will launch Magic layout tool and select "met3.mag"
 Then, we will enter "load poly" in our command prompt
 
 <img width="1207" height="760" alt="Image" src="https://github.com/user-attachments/assets/cbabfa49-1e20-462a-91e5-e17e24af2c6d" />
+
+We will begin by creating 2 instances of the poly.9 violation and deleting the poly layer, then placing n diffusion and p diffusion respectively along with their coresponding psubtratepdiff and nsubstratendiff taps, for the p diffusion and n tap we will also add an n well to clean up irrelevant erros. This approach ensures that our drc rule does not apply only to poly.
+
+<img width="689" height="357" alt="Image" src="https://github.com/user-attachments/assets/5a48ae73-05e9-47bf-92f7-a73b4a746364" />
+
+#
+We will start by fixing the drc spacing error between the poly resistors and poly, and then changing nsd (N-diff) to alldiff in the sky130A.tech file.
+
+<img width="667" height="105" alt="Image" src="https://github.com/user-attachments/assets/7f0b7efd-d945-4e4d-8395-525e203326e9" />
+
+
+<img width="532" height="77" alt="Image" src="https://github.com/user-attachments/assets/67005706-cd64-4d7b-95dd-df65b1256a86" />
+
+Now the violations appear on our report.
+
+<img width="512" height="113" alt="Image" src="https://github.com/user-attachments/assets/5f3b1f4c-8d69-48aa-8599-2d2985b41691" />
