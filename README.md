@@ -139,7 +139,7 @@ magic -T/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sk
 
 # Day 3 — Design library cell using Magic Layout and ngspice characterization
 
-Firstly we will analyze an inverter cell design, the design can be found at:
+First we will analyze an inverter cell design, the design can be found at:
 
 ```bash
 https://github.com/nickson-jose/vsdstdcelldesign
@@ -149,8 +149,23 @@ We will create a copy of the technology file in the design's directory
 ```bash
 ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic$ cp sky130A.tech vsdstdcelldesign/libs
 ```
-then launch Magic
+then launch Magic layout tool
 ```bash
 ~/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/libs$ magic -T sky130A.tech sky130_inv.mag
 ```
 <img width="1038" height="617" alt="Image" src="https://github.com/user-attachments/assets/3321d73b-7a38-439a-983e-2e7214844977" />
+
+#
+After we extract all the parameters to a .spice file we will modify it like this to include a transient analysis
+<img width="718" height="470" alt="Image" src="https://github.com/user-attachments/assets/cf788223-b969-4a7b-b78a-65347508855f" />
+
+We will launch ng spice with the following command, including our pmos and nmos libs as well
+
+```bash
+~/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/libs$ ngspice sky130_inv.spice nshort.lib pshort.lib
+```
+And view our plotted input and output
+```bash
+ngspice 1 -> plot y vs time a
+```
+<img width="1326" height="745" alt="Image" src="https://github.com/user-attachments/assets/6de9b18c-c031-474d-9ee1-52c5a905a813" />
