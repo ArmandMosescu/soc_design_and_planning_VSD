@@ -173,7 +173,9 @@ ngspice 1 -> plot y vs time a
 #
 
 # Lab exercise to fix poly.9 error in Sky130 tech-file
-
+#
+Incorrectly implemented poly.9 rule resulting in no drc violation even though the spacing < 0.48u. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+#
 We will download the drc_test archive from 
 
 ```bash
