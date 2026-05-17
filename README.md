@@ -208,7 +208,7 @@ Now the violations appear on our report.
 
 ##
 # Day 4 — Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
-#
+
 About LEF files and guidelines for standard cell ports
 
 Before custom cells can be used inside OpenLane they need proper __LEF__ files describing their physical boundaries, pin locations and metal layer info.
@@ -216,8 +216,7 @@ port definitions follow 2 main rules:
 
 - All I/O ports lay on the intersection of horizontal and vertical routing tracks.
 - The cell width must be an odd multiple of the horizontal track pitch, and the height must be an odd multiple of the vertical track pitch
-  <img width="1028" height="696" alt="Image" src="https://github.com/user-attachments/assets/8e7c5ff0-33c9-42ad-9f5f-d12760e34b58" />
-  As seen in the picture our I/O ports respect the rules
+ 
 #
 ### STA (Static timing analysis) conceps:
 
@@ -235,3 +234,26 @@ CTS Builds a balanced tree of clock buffers that distribute the clock signal eve
 Rules after CTS:
 - Hold time must be rechecked as CTS inserts buffers that add quantitative delays
 - Setup time must be reverified as CTS changes clock paths
+#
+ # Lab Timing modelling using delay tables
+
+
+## L1 - Steps to convert grid info to track info 
+
+  <img width="1028" height="696" alt="Image" src="https://github.com/user-attachments/assets/8e7c5ff0-33c9-42ad-9f5f-d12760e34b58" />
+  As seen in the picture our I/O ports respect the rules, and now the place and route's alignment can happen along our grid.
+  
+ #
+## L2 - Steps to convert magic layout to std cell LEF 
+
+<img width="1217" height="741" alt="Image" src="https://github.com/user-attachments/assets/295fc4ea-54a3-4eba-b18b-4149f0426bff" />
+ 
+ After defining our pins A,Y,GND,PWR we will save a .mag file of our design called sky130_vsdinv.mag
+ Then, we will execute the "lef write" command
+ 
+ ```bash
+lef write
+```
+<img width="941" height="657" alt="Image" src="https://github.com/user-attachments/assets/518ab54c-0f5a-41eb-8ce0-4f327e0dd985" />
+
+Our .lef file is ready
