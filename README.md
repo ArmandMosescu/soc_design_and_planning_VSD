@@ -257,3 +257,25 @@ lef write
 <img width="941" height="657" alt="Image" src="https://github.com/user-attachments/assets/518ab54c-0f5a-41eb-8ce0-4f327e0dd985" />
 
 Our .lef file is ready
+
+#
+## L3 - Introduction to timing libs and steps to include new cell in synthesis
+
+We will begin by adding our inverter's .lef and the slow, fast and typical timing libs to our picorv32a core's src directory, and then modfying our picorv32a's config.tcl file to include the changes
+
+<img width="1193" height="570" alt="Image" src="https://github.com/user-attachments/assets/ad0cc1eb-dabd-48a1-bdfa-bbc9fc170773" />
+After loading our picorv32 design into OpenLane we will enter the following commands:
+
+ ```bash
+% set lefs [glob $::env(DESIGN_DIR)/src/*lef]
+% add_lefs -src $lefs
+```
+
+After synthesizing, running floorplan and then placement we are greeted with our succesful layout of the inv cell implemented in our core
+
+<img width="780" height="783" alt="Image" src="https://github.com/user-attachments/assets/023464dd-6e42-4d66-8641-5fcb089f9481" />
+
+#
+With a quick search in our layout we can identify one of our new placed cells the sky130_vsdinv
+
+<img width="582" height="379" alt="Image" src="https://github.com/user-attachments/assets/ae38857c-ef3f-4685-af94-ca7c06325600" />
