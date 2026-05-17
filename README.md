@@ -282,3 +282,15 @@ With a quick search in our layout we can identify one of our new placed cells th
 <img width="177" height="305" alt="Image" src="https://github.com/user-attachments/assets/db560e14-cb84-40ea-bf0a-e05b2997f29f" />
 
 #
+# Day 5 Final RTL to GDSII using TritonRoute & OpenSTA
+
+Routing is done in 2 ways:
+- Global Routing (FastRoute) - it divides the chip into routing regions and find aproximate paths for each net respecting layer and congestion constraints
+- Detailed Routing (TritonRoute) — takes the global routing guides and assigns exact wire segments, vias, and metal tracks while adhering to DRC rules
+
+  SPEF and Post-Route STA
+
+After routing, parasitics (resistance and capacitance of actual wires) are extracted into a SPEF (Standard Parasitic Exchange Format) file. These parasitics are then back-annotated into the netlist and STA(static timing analysis) is re-run for final sign-off timing.
+
+
+
