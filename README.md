@@ -207,7 +207,7 @@ Now the violations appear on our report.
 <img width="512" height="113" alt="Image" src="https://github.com/user-attachments/assets/5f3b1f4c-8d69-48aa-8599-2d2985b41691" />
 
 ##
-# Day 4 — Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
+# Day 4 - Pre-layout timing analysis and importance of good clock tree
 
 About LEF files and guidelines for standard cell ports
 
