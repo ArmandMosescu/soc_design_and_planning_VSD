@@ -235,16 +235,16 @@ Rules after CTS:
 - Hold time must be rechecked as CTS inserts buffers that add quantitative delays
 - Setup time must be reverified as CTS changes clock paths
 #
- # Lab1 Timing modelling using delay tables
+ # Lab Timing modelling using delay tables
 
 
-## L1.1 - Steps to convert grid info to track info 
+## L1 - Steps to convert grid info to track info 
 
   <img width="1028" height="696" alt="Image" src="https://github.com/user-attachments/assets/8e7c5ff0-33c9-42ad-9f5f-d12760e34b58" />
   As seen in the picture our I/O ports respect the rules, and now the place and route's alignment can happen along our grid.
   
  #
-## L1.2 - Steps to convert magic layout to std cell LEF 
+## L2 - Steps to convert magic layout to std cell LEF 
 
 <img width="1217" height="741" alt="Image" src="https://github.com/user-attachments/assets/295fc4ea-54a3-4eba-b18b-4149f0426bff" />
  
@@ -259,7 +259,7 @@ lef write
 Our .lef file is ready
 
 #
-## L1.3 - Introduction to timing libs and steps to include new cell in synthesis
+## L3 - Introduction to timing libs and steps to include new cell in synthesis
 
 We will begin by adding our inverter's .lef and the slow, fast and typical timing libs to our picorv32a core's src directory, and then modfying our picorv32a's config.tcl file to include the changes
 
