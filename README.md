@@ -279,3 +279,4 @@ After synthesizing, running floorplan and then placement we are greeted with our
 With a quick search in our layout we can identify one of our new placed cells the sky130_vsdinv
 
 <img width="582" height="379" alt="Image" src="https://github.com/user-attachments/assets/ae38857c-ef3f-4685-af94-ca7c06325600" />
+<img width="177" height="305" alt="Image" src="https://github.com/user-attachments/assets/db560e14-cb84-40ea-bf0a-e05b2997f29f" />
