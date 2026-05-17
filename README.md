@@ -283,3 +283,4 @@ With a quick search in our layout we can identify one of our new placed cells th
 
 #
 # Lab2 Timing analysis with ideal clocks using openSTA
+#
