@@ -205,3 +205,33 @@ We will start by fixing the drc spacing error between the poly resistors and pol
 Now the violations appear on our report.
 
 <img width="512" height="113" alt="Image" src="https://github.com/user-attachments/assets/5f3b1f4c-8d69-48aa-8599-2d2985b41691" />
+
+##
+# Day 4 — Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
+#
+About LEF files and guidelines for standard cell ports
+
+Before custom cells can be used inside OpenLane they need proper __LEF__ files describing their physical boundaries, pin locations and metal layer info.
+port definitions follow 2 main rules:
+
+- All I/O ports lay on the intersection of horizontal and vertical routing tracks.
+- The cell width must be an odd multiple of the horizontal track pitch, and the height must be an odd multiple of the vertical track pitch
+  <img width="1028" height="696" alt="Image" src="https://github.com/user-attachments/assets/8e7c5ff0-33c9-42ad-9f5f-d12760e34b58" />
+  As seen in the picture our I/O ports respect the rules
+#
+### STA (Static timing analysis) conceps:
+
+- __Setup slack__ = Data required time - Data arrival time (equal or more than 0)
+
+Uncertain variables accounted for in STA:
+- __OCV__ (On chip variation) - process/voltage/temperature variation modelled using derate factors
+- __Clock Uncertainty__ - Jitter and skew margins added to timing paths
+- __CRPR__(Clock Reconvergence Pessimism Removal) - Removes artificial pessimism when launch and capture paths share clock buffers
+#
+### Clock Tree Synthesis (CTS)
+
+CTS Builds a balanced tree of clock buffers that distribute the clock signal evenlt across the chip with minimal skew.
+
+Rules after CTS:
+- Hold time must be rechecked as CTS inserts buffers that add quantitative delays
+- Setup time must be reverified as CTS changes clock paths
