@@ -295,3 +295,27 @@ After routing, parasitics (resistance and capacitance of actual wires) are extra
 This is the result of our succesful detailed routing using TritonRoute: 
 <img width="2048" height="2048" alt="Image" src="https://github.com/user-attachments/assets/65b63fb2-c250-41fa-a70b-db0dce69ce0a" />
 
+# Key learnings
+- Understood how a chip moves from an idea (RTL) to a manufacturable file (GDSII) using a fully open-source toolchain
+- Got hands-on with floorplanning, placement, CTS, and routing for the picorv32a RISC-V core
+- Learned how to characterise custom standard cells and integrate them into an existing flow
+- Gained practical experience with STA concepts — setup/hold slack, OCV, CRPR — using OpenSTA
+- Understood how parasitics from post-route SPEF extraction affect timing sign-off
+
+# Acknowledgements
+
+A huge thank you to Kunal Ghosh (Co-founder, VSD Corp. Pvt. Ltd.) and Nickson P Jose (Physical Design Engineer, Intel) for putting together such a well-structured and genuinely practical workshop. Running a real CPU from RTL to GDSII using nothing but open-source tools is something I didn’t expect to be possible — and yet here we are.
+
+- Kunal Ghosh — Co-founder, VSD (VLSI System Design)
+- Nickson Jose — for the vsdstdcelldesign repository used in Day 3 labs
+- NASSCOM — for facilitating this workshop program
+
+# References
+
+[VLSI Soc Design Worskhop](https://www.vlsisystemdesign.com/)
+
+[OpenLANE GitHub](https://github.com/The-OpenROAD-Project/OpenLane)
+
+[SkyWater Sky130 PDK](https://github.com/google/skywater-pdk)
+
+[Vsdstcelldesign](https://github.com/nickson-jose/vsdstdcelldesign)
