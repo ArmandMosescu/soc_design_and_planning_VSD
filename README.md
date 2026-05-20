@@ -292,5 +292,6 @@ Routing is done in 2 ways:
 
 After routing, parasitics (resistance and capacitance of actual wires) are extracted into a SPEF (Standard Parasitic Exchange Format) file. These parasitics are then back-annotated into the netlist and STA(static timing analysis) is re-run for final sign-off timing.
 
-
+This is the result of our succesful detailed routing using TritonRoute: 
+<img width="2048" height="2048" alt="Image" src="https://github.com/user-attachments/assets/65b63fb2-c250-41fa-a70b-db0dce69ce0a" />
 
